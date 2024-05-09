@@ -2,16 +2,17 @@
 module.exports = {
   content: [
     './index.html',
-    './src/*.css'
-    
+    './src/*.css',
+    './components/**/*.{html,js}',
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'dog': "url("+URL+")",
-      }
+    },
+    fontFamily: {
+      'Jersey': ['"Jersey 25 Charted"', 'sans-serif'],
     },
   },
   plugins: [],
+  
 }
 

@@ -554,6 +554,68 @@ video {
   --tw-contain-style:  ;
 }
 
+.btn-primary {
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(139 92 246 / var(--tw-bg-opacity));
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.btn-primary:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(109 40 217 / var(--tw-bg-opacity));
+}
+
+.btn-primary:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+  --tw-ring-color: rgb(167 139 250 / var(--tw-ring-opacity));
+  --tw-ring-opacity: 0.75;
+}
+
+.btn-secundary {
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.btn-secundary:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+}
+
+.btn-secundary:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+  --tw-ring-color: rgb(96 165 250 / var(--tw-ring-opacity));
+  --tw-ring-opacity: 0.75;
+}
+
 .visible {
   visibility: visible;
 }
@@ -570,8 +632,28 @@ video {
   position: relative;
 }
 
+.m-2 {
+  margin: 0.5rem;
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
 .block {
   display: block;
+}
+
+.flex {
+  display: flex;
 }
 
 .table {
@@ -588,6 +670,10 @@ video {
 
 .h-48 {
   height: 12rem;
+}
+
+.h-auto {
+  height: auto;
 }
 
 .h-full {
@@ -614,6 +700,26 @@ video {
   resize: both;
 }
 
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
 .border {
   border-width: 1px;
 }
@@ -635,303 +741,62 @@ video {
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
-.bg-dog {
-  background-image: url(class URL {
-  #context = new URLContext();
-  #searchParams;
+.bg-blue-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+}
 
-  constructor(input, base = undefined) {
-    if (arguments.length === 0) {
-      throw new ERR_MISSING_ARGS('url');
-    }
+.bg-violet-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(139 92 246 / var(--tw-bg-opacity));
+}
 
-    // toUSVString is not needed.
-    input = `${input}`;
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 
-    if (base !== undefined) {
-      base = `${base}`;
-    }
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
 
-    this.#updateContext(bindingUrl.parse(input, base));
-  }
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
 
-  [inspect.custom](depth, opts) {
-    if (typeof depth === 'number' && depth < 0)
-      return this;
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
 
-    const constructor = getConstructorOf(this) || URL;
-    const obj = { __proto__: { constructor } };
+.font-Jersey {
+  font-family: "Jersey 25 Charted", sans-serif;
+}
 
-    obj.href = this.href;
-    obj.origin = this.origin;
-    obj.protocol = this.protocol;
-    obj.username = this.username;
-    obj.password = this.password;
-    obj.host = this.host;
-    obj.hostname = this.hostname;
-    obj.port = this.port;
-    obj.pathname = this.pathname;
-    obj.search = this.search;
-    obj.searchParams = this.searchParams;
-    obj.hash = this.hash;
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
 
-    if (opts.showHidden) {
-      obj[contextForInspect] = this.#context;
-    }
+.font-semibold {
+  font-weight: 600;
+}
 
-    return `${constructor.name} ${inspect(obj, opts)}`;
-  }
-
-  #updateContext(href) {
-    this.#context.href = href;
-
-    const {
-      0: protocol_end,
-      1: username_end,
-      2: host_start,
-      3: host_end,
-      4: port,
-      5: pathname_start,
-      6: search_start,
-      7: hash_start,
-      8: scheme_type,
-    } = bindingUrl.urlComponents;
-
-    this.#context.protocol_end = protocol_end;
-    this.#context.username_end = username_end;
-    this.#context.host_start = host_start;
-    this.#context.host_end = host_end;
-    this.#context.port = port;
-    this.#context.pathname_start = pathname_start;
-    this.#context.search_start = search_start;
-    this.#context.hash_start = hash_start;
-    this.#context.scheme_type = scheme_type;
-
-    if (this.#searchParams) {
-      if (this.#context.hasSearch) {
-        setURLSearchParams(this.#searchParams, this.search);
-      } else {
-        setURLSearchParams(this.#searchParams, undefined);
-      }
-    }
-  }
-
-  toString() {
-    return this.#context.href;
-  }
-
-  get href() {
-    return this.#context.href;
-  }
-
-  set href(value) {
-    value = `${value}`;
-    const href = bindingUrl.update(this.#context.href, updateActions.kHref, value);
-    if (!href) { throw new ERR_INVALID_URL(value); }
-    this.#updateContext(href);
-  }
-
-  // readonly
-  get origin() {
-    const protocol = StringPrototypeSlice(this.#context.href, 0, this.#context.protocol_end);
-
-    // Check if scheme_type is not `NOT_SPECIAL`
-    if (this.#context.scheme_type !== 1) {
-      // Check if scheme_type is `FILE`
-      if (this.#context.scheme_type === 6) {
-        return 'null';
-      }
-      return `${protocol}//${this.host}`;
-    }
-
-    if (protocol === 'blob:') {
-      const path = this.pathname;
-      if (path.length > 0) {
-        try {
-          const out = new URL(path);
-          // Only return origin of scheme is `http` or `https`
-          // Otherwise return a new opaque origin (null).
-          if (out.#context.scheme_type === 0 || out.#context.scheme_type === 2) {
-            return `${out.protocol}//${out.host}`;
-          }
-        } catch {
-          // Do nothing.
-        }
-      }
-    }
-
-    return 'null';
-  }
-
-  get protocol() {
-    return StringPrototypeSlice(this.#context.href, 0, this.#context.protocol_end);
-  }
-
-  set protocol(value) {
-    const href = bindingUrl.update(this.#context.href, updateActions.kProtocol, `${value}`);
-    if (href) {
-      this.#updateContext(href);
-    }
-  }
-
-  get username() {
-    if (this.#context.protocol_end + 2 < this.#context.username_end) {
-      return StringPrototypeSlice(this.#context.href, this.#context.protocol_end + 2, this.#context.username_end);
-    }
-    return '';
-  }
-
-  set username(value) {
-    const href = bindingUrl.update(this.#context.href, updateActions.kUsername, `${value}`);
-    if (href) {
-      this.#updateContext(href);
-    }
-  }
-
-  get password() {
-    if (this.#context.host_start - this.#context.username_end > 0) {
-      return StringPrototypeSlice(this.#context.href, this.#context.username_end + 1, this.#context.host_start);
-    }
-    return '';
-  }
-
-  set password(value) {
-    const href = bindingUrl.update(this.#context.href, updateActions.kPassword, `${value}`);
-    if (href) {
-      this.#updateContext(href);
-    }
-  }
-
-  get host() {
-    let startsAt = this.#context.host_start;
-    if (this.#context.href[startsAt] === '@') {
-      startsAt++;
-    }
-    // If we have an empty host, then the space between components.host_end and
-    // components.pathname_start may be occupied by /.
-    if (startsAt === this.#context.host_end) {
-      return '';
-    }
-    return StringPrototypeSlice(this.#context.href, startsAt, this.#context.pathname_start);
-  }
-
-  set host(value) {
-    const href = bindingUrl.update(this.#context.href, updateActions.kHost, `${value}`);
-    if (href) {
-      this.#updateContext(href);
-    }
-  }
-
-  get hostname() {
-    let startsAt = this.#context.host_start;
-    // host_start might be "@" if the URL has credentials
-    if (this.#context.href[startsAt] === '@') {
-      startsAt++;
-    }
-    return StringPrototypeSlice(this.#context.href, startsAt, this.#context.host_end);
-  }
-
-  set hostname(value) {
-    const href = bindingUrl.update(this.#context.href, updateActions.kHostname, `${value}`);
-    if (href) {
-      this.#updateContext(href);
-    }
-  }
-
-  get port() {
-    if (this.#context.hasPort) {
-      return `${this.#context.port}`;
-    }
-    return '';
-  }
-
-  set port(value) {
-    const href = bindingUrl.update(this.#context.href, updateActions.kPort, `${value}`);
-    if (href) {
-      this.#updateContext(href);
-    }
-  }
-
-  get pathname() {
-    let endsAt;
-    if (this.#context.hasSearch) {
-      endsAt = this.#context.search_start;
-    } else if (this.#context.hasHash) {
-      endsAt = this.#context.hash_start;
-    }
-    return StringPrototypeSlice(this.#context.href, this.#context.pathname_start, endsAt);
-  }
-
-  set pathname(value) {
-    const href = bindingUrl.update(this.#context.href, updateActions.kPathname, `${value}`);
-    if (href) {
-      this.#updateContext(href);
-    }
-  }
-
-  get search() {
-    if (!this.#context.hasSearch) { return ''; }
-    let endsAt = this.#context.href.length;
-    if (this.#context.hasHash) { endsAt = this.#context.hash_start; }
-    if (endsAt - this.#context.search_start <= 1) { return ''; }
-    return StringPrototypeSlice(this.#context.href, this.#context.search_start, endsAt);
-  }
-
-  set search(value) {
-    const href = bindingUrl.update(this.#context.href, updateActions.kSearch, toUSVString(value));
-    if (href) {
-      this.#updateContext(href);
-    }
-  }
-
-  // readonly
-  get searchParams() {
-    // Create URLSearchParams on demand to greatly improve the URL performance.
-    if (this.#searchParams == null) {
-      this.#searchParams = new URLSearchParams(this.search);
-      setURLSearchParamsContext(this.#searchParams, this);
-    }
-    return this.#searchParams;
-  }
-
-  get hash() {
-    if (!this.#context.hasHash || (this.#context.href.length - this.#context.hash_start <= 1)) {
-      return '';
-    }
-    return StringPrototypeSlice(this.#context.href, this.#context.hash_start);
-  }
-
-  set hash(value) {
-    const href = bindingUrl.update(this.#context.href, updateActions.kHash, `${value}`);
-    if (href) {
-      this.#updateContext(href);
-    }
-  }
-
-  toJSON() {
-    return this.#context.href;
-  }
-
-  static canParse(url, base = undefined) {
-    if (arguments.length === 0) {
-      throw new ERR_MISSING_ARGS('url');
-    }
-
-    url = `${url}`;
-
-    if (base !== undefined) {
-      return bindingUrl.canParse(url, `${base}`);
-    }
-
-    // It is important to differentiate the canParse call statements
-    // since they resolve into different v8 fast api overloads.
-    return bindingUrl.canParse(url);
-  }
-});
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .underline {
   text-decoration-line: underline;
+}
+
+.shadow-md {
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .outline {
@@ -939,303 +804,42 @@ video {
 }
 
 .ImgDog {
-  height: 12rem;
+  margin: 0.5rem;
+  height: auto;
   width: 12rem;
   border-width: 2px;
   border-style: solid;
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
-  background-image: url(class URL {
-  #context = new URLContext();
-  #searchParams;
+}
 
-  constructor(input, base = undefined) {
-    if (arguments.length === 0) {
-      throw new ERR_MISSING_ARGS('url');
-    }
+.hover\:bg-blue-600:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+}
 
-    // toUSVString is not needed.
-    input = `${input}`;
+.hover\:bg-violet-700:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(109 40 217 / var(--tw-bg-opacity));
+}
 
-    if (base !== undefined) {
-      base = `${base}`;
-    }
+.focus\:outline-none:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
 
-    this.#updateContext(bindingUrl.parse(input, base));
-  }
+.focus\:ring:focus {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
 
-  [inspect.custom](depth, opts) {
-    if (typeof depth === 'number' && depth < 0)
-      return this;
+.focus\:ring-blue-400:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(96 165 250 / var(--tw-ring-opacity));
+}
 
-    const constructor = getConstructorOf(this) || URL;
-    const obj = { __proto__: { constructor } };
-
-    obj.href = this.href;
-    obj.origin = this.origin;
-    obj.protocol = this.protocol;
-    obj.username = this.username;
-    obj.password = this.password;
-    obj.host = this.host;
-    obj.hostname = this.hostname;
-    obj.port = this.port;
-    obj.pathname = this.pathname;
-    obj.search = this.search;
-    obj.searchParams = this.searchParams;
-    obj.hash = this.hash;
-
-    if (opts.showHidden) {
-      obj[contextForInspect] = this.#context;
-    }
-
-    return `${constructor.name} ${inspect(obj, opts)}`;
-  }
-
-  #updateContext(href) {
-    this.#context.href = href;
-
-    const {
-      0: protocol_end,
-      1: username_end,
-      2: host_start,
-      3: host_end,
-      4: port,
-      5: pathname_start,
-      6: search_start,
-      7: hash_start,
-      8: scheme_type,
-    } = bindingUrl.urlComponents;
-
-    this.#context.protocol_end = protocol_end;
-    this.#context.username_end = username_end;
-    this.#context.host_start = host_start;
-    this.#context.host_end = host_end;
-    this.#context.port = port;
-    this.#context.pathname_start = pathname_start;
-    this.#context.search_start = search_start;
-    this.#context.hash_start = hash_start;
-    this.#context.scheme_type = scheme_type;
-
-    if (this.#searchParams) {
-      if (this.#context.hasSearch) {
-        setURLSearchParams(this.#searchParams, this.search);
-      } else {
-        setURLSearchParams(this.#searchParams, undefined);
-      }
-    }
-  }
-
-  toString() {
-    return this.#context.href;
-  }
-
-  get href() {
-    return this.#context.href;
-  }
-
-  set href(value) {
-    value = `${value}`;
-    const href = bindingUrl.update(this.#context.href, updateActions.kHref, value);
-    if (!href) { throw new ERR_INVALID_URL(value); }
-    this.#updateContext(href);
-  }
-
-  // readonly
-  get origin() {
-    const protocol = StringPrototypeSlice(this.#context.href, 0, this.#context.protocol_end);
-
-    // Check if scheme_type is not `NOT_SPECIAL`
-    if (this.#context.scheme_type !== 1) {
-      // Check if scheme_type is `FILE`
-      if (this.#context.scheme_type === 6) {
-        return 'null';
-      }
-      return `${protocol}//${this.host}`;
-    }
-
-    if (protocol === 'blob:') {
-      const path = this.pathname;
-      if (path.length > 0) {
-        try {
-          const out = new URL(path);
-          // Only return origin of scheme is `http` or `https`
-          // Otherwise return a new opaque origin (null).
-          if (out.#context.scheme_type === 0 || out.#context.scheme_type === 2) {
-            return `${out.protocol}//${out.host}`;
-          }
-        } catch {
-          // Do nothing.
-        }
-      }
-    }
-
-    return 'null';
-  }
-
-  get protocol() {
-    return StringPrototypeSlice(this.#context.href, 0, this.#context.protocol_end);
-  }
-
-  set protocol(value) {
-    const href = bindingUrl.update(this.#context.href, updateActions.kProtocol, `${value}`);
-    if (href) {
-      this.#updateContext(href);
-    }
-  }
-
-  get username() {
-    if (this.#context.protocol_end + 2 < this.#context.username_end) {
-      return StringPrototypeSlice(this.#context.href, this.#context.protocol_end + 2, this.#context.username_end);
-    }
-    return '';
-  }
-
-  set username(value) {
-    const href = bindingUrl.update(this.#context.href, updateActions.kUsername, `${value}`);
-    if (href) {
-      this.#updateContext(href);
-    }
-  }
-
-  get password() {
-    if (this.#context.host_start - this.#context.username_end > 0) {
-      return StringPrototypeSlice(this.#context.href, this.#context.username_end + 1, this.#context.host_start);
-    }
-    return '';
-  }
-
-  set password(value) {
-    const href = bindingUrl.update(this.#context.href, updateActions.kPassword, `${value}`);
-    if (href) {
-      this.#updateContext(href);
-    }
-  }
-
-  get host() {
-    let startsAt = this.#context.host_start;
-    if (this.#context.href[startsAt] === '@') {
-      startsAt++;
-    }
-    // If we have an empty host, then the space between components.host_end and
-    // components.pathname_start may be occupied by /.
-    if (startsAt === this.#context.host_end) {
-      return '';
-    }
-    return StringPrototypeSlice(this.#context.href, startsAt, this.#context.pathname_start);
-  }
-
-  set host(value) {
-    const href = bindingUrl.update(this.#context.href, updateActions.kHost, `${value}`);
-    if (href) {
-      this.#updateContext(href);
-    }
-  }
-
-  get hostname() {
-    let startsAt = this.#context.host_start;
-    // host_start might be "@" if the URL has credentials
-    if (this.#context.href[startsAt] === '@') {
-      startsAt++;
-    }
-    return StringPrototypeSlice(this.#context.href, startsAt, this.#context.host_end);
-  }
-
-  set hostname(value) {
-    const href = bindingUrl.update(this.#context.href, updateActions.kHostname, `${value}`);
-    if (href) {
-      this.#updateContext(href);
-    }
-  }
-
-  get port() {
-    if (this.#context.hasPort) {
-      return `${this.#context.port}`;
-    }
-    return '';
-  }
-
-  set port(value) {
-    const href = bindingUrl.update(this.#context.href, updateActions.kPort, `${value}`);
-    if (href) {
-      this.#updateContext(href);
-    }
-  }
-
-  get pathname() {
-    let endsAt;
-    if (this.#context.hasSearch) {
-      endsAt = this.#context.search_start;
-    } else if (this.#context.hasHash) {
-      endsAt = this.#context.hash_start;
-    }
-    return StringPrototypeSlice(this.#context.href, this.#context.pathname_start, endsAt);
-  }
-
-  set pathname(value) {
-    const href = bindingUrl.update(this.#context.href, updateActions.kPathname, `${value}`);
-    if (href) {
-      this.#updateContext(href);
-    }
-  }
-
-  get search() {
-    if (!this.#context.hasSearch) { return ''; }
-    let endsAt = this.#context.href.length;
-    if (this.#context.hasHash) { endsAt = this.#context.hash_start; }
-    if (endsAt - this.#context.search_start <= 1) { return ''; }
-    return StringPrototypeSlice(this.#context.href, this.#context.search_start, endsAt);
-  }
-
-  set search(value) {
-    const href = bindingUrl.update(this.#context.href, updateActions.kSearch, toUSVString(value));
-    if (href) {
-      this.#updateContext(href);
-    }
-  }
-
-  // readonly
-  get searchParams() {
-    // Create URLSearchParams on demand to greatly improve the URL performance.
-    if (this.#searchParams == null) {
-      this.#searchParams = new URLSearchParams(this.search);
-      setURLSearchParamsContext(this.#searchParams, this);
-    }
-    return this.#searchParams;
-  }
-
-  get hash() {
-    if (!this.#context.hasHash || (this.#context.href.length - this.#context.hash_start <= 1)) {
-      return '';
-    }
-    return StringPrototypeSlice(this.#context.href, this.#context.hash_start);
-  }
-
-  set hash(value) {
-    const href = bindingUrl.update(this.#context.href, updateActions.kHash, `${value}`);
-    if (href) {
-      this.#updateContext(href);
-    }
-  }
-
-  toJSON() {
-    return this.#context.href;
-  }
-
-  static canParse(url, base = undefined) {
-    if (arguments.length === 0) {
-      throw new ERR_MISSING_ARGS('url');
-    }
-
-    url = `${url}`;
-
-    if (base !== undefined) {
-      return bindingUrl.canParse(url, `${base}`);
-    }
-
-    // It is important to differentiate the canParse call statements
-    // since they resolve into different v8 fast api overloads.
-    return bindingUrl.canParse(url);
-  }
-});
-  background-size: contain;
+.focus\:ring-violet-400:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(167 139 250 / var(--tw-ring-opacity));
 }

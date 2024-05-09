@@ -4,14 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./src/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+25+Charted&display=swap" rel="stylesheet">
     <title>Perros aleatoreos</title>
 </head>
-<body>
-    <h1>Perros aleatoreos</h1>
-    <div id="DOG" class="ImgDog">
-        <img alt="Foto perros">
+<body class="flex flex-col items-center">
+    <h1 class="mt-4 font-Jersey text-3xl">Perros aleatoreos</h1>
+
+    <div class="mb-4 flex flex-row justify-center">
+        <div class="flex flex-col items-center">
+            <img id="dog_1" class="ImgDog" alt="Foto perros">
+            <button class="btn-secundary">Guardar</button>
+        </div>
+        <div class="flex flex-col items-center">
+            <img id="dog_2" class="ImgDog" alt="Foto perros">
+            <button class="btn-secundary">Guardar</button>
+        </div>
+        <div class="flex flex-col items-center">
+            <img  id="dog_3" class="ImgDog" alt="Foto perros">
+            <button class="btn-secundary">Guardar</button>
+        </div>
     </div>
-    <button class="btn-primary">recargar</button>
+    <button id="siguiente" class="btn-primary">siguiente</button>
     <script src="/main.js"></script>
 </body>
 </html>
