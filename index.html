@@ -10,9 +10,13 @@
     <title>Perros aleatoreos</title>
 </head>
 <body class="flex flex-col items-center">
-    <h1 class="mt-4 font-Jersey text-3xl">Perros aleatoreos</h1>
+    <h1 class="mt-4 font-Jersey text-4xl">Perros App</h1>
 
-    <div class="mb-4 flex flex-row justify-center">
+    <span id="error" class="hidden"></span>
+    <span id="error2" class="hidden"></span>
+
+    <h2 class="mt-4 font-Jersey text-2xl text-blue-600">Perros aleatorios</h2>
+    <div class="mb-4 flex flex-row items-center">
         <div class="flex flex-col items-center">
             <img id="dog_1" class="ImgDog" alt="Foto perros">
             <button class="btn-secundary">Guardar</button>
@@ -26,7 +30,19 @@
             <button class="btn-secundary">Guardar</button>
         </div>
     </div>
+    
     <button id="siguiente" class="btn-primary">siguiente</button>
+
+    <section id="favoritos" class="m-5 flex flex-col items-center">
+        <h2 class="m-4 font-Jersey text-2xl text-blue-600">Favoritos</h2>
+        <article class="flex flex-row items-center">
+            <div class="flex flex-col items-center">
+                <img alt="foto de perro favorito">
+                <button class="btn-secundary">Eliminar</button>
+            </div>
+        </article>
+    </section>
+
     <script src="/main.js"></script>
 </body>
 </html>
