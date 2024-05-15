@@ -9,6 +9,8 @@ const error = document.querySelector('#error')
 const error2 = document.querySelector('#error2')
 const button_next = document.querySelector('#siguiente');
 const datas = [];
+const favoritos = [];
+const favorito = document.querySelector('#favoritos');
 
 async function loadRandomDogs(){
   const res = await fetch(URL_RANDOM);
@@ -42,6 +44,35 @@ async function favouriteDogs(){
     const data2 = await res2.json();
     if(res2.status !== 200) throw new Error(`${res2.status}: ${res2.statusText}`);
     console.log('Favourite:',data2);
+
+    data2.forEach(element => {
+      favoritos.push(element);
+    });
+
+    favoritos.forEach(element => {
+      const art = document.createElement('article');
+      favorito.appendChild(art);
+      art.classList.add('flex');
+      art.classList.add('flex-row');
+      art.classList.add('items-center');
+      // art.classList.add('art');
+      const divFav = document.createElement('div');
+      divFav.classList.add('flex');
+      divFav.classList.add('flex-col');
+      divFav.classList.add('items-center');
+      // divFav.classList.add('divFav');
+      art.appendChild(divFav);
+      const img = document.createElement('img');
+      img.src = `${element.image.url}`;
+      divFav.appendChild(img);
+      img.classList.add('ImgDog');
+      const delFav = document.createElement('button');
+      delFav.classList.add('btn-secundary'); 
+      delFav.innerHTML = "Eliminar"
+      divFav.appendChild(delFav)
+    });
+      
+
   }catch(error){
     error2.classList.remove('hidden')
     error2.classList.add('error');
