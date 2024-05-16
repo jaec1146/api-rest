@@ -4,6 +4,7 @@ const LIMIT_RANDOM = '?limit=3&'
 const KEY = 'api_key=live_8CfJVJI3Xfe7I02waYjCXjfIJTC4orhq028yx7vyxbdC5qRMPrukEV8mlQgIcuYD';
 const URL_RANDOM = URL + RANDOM + LIMIT_RANDOM + KEY;
 const URL_FAVOURITE = URL + 'favourites?' + KEY;
+const URL_FAVOURITE_DELETE = (id) => URL + `favourites/${id}?` + KEY ;
 
 const error = document.querySelector('#error')
 const error2 = document.querySelector('#error2')
@@ -15,6 +16,7 @@ const favorito = document.querySelector('#favoritos');
 async function loadRandomDogs(){
   const res = await fetch(URL_RANDOM);
   const data = await res.json();
+  console.log(data);
   if(res.status != 200){
     error.classList.remove('success');
     error.classList.add('error');
@@ -52,15 +54,9 @@ async function favouriteDogs(){
     favoritos.forEach(element => {
       const art = document.createElement('article');
       favorito.appendChild(art);
-      art.classList.add('flex');
-      art.classList.add('flex-row');
-      art.classList.add('items-center');
-      // art.classList.add('art');
+      art.classList.add('art');
       const divFav = document.createElement('div');
-      divFav.classList.add('flex');
-      divFav.classList.add('flex-col');
-      divFav.classList.add('items-center');
-      // divFav.classList.add('divFav');
+      divFav.classList.add('divFav');
       art.appendChild(divFav);
       const img = document.createElement('img');
       img.src = `${element.image.url}`;
@@ -70,6 +66,7 @@ async function favouriteDogs(){
       delFav.classList.add('btn-secundary'); 
       delFav.innerHTML = "Eliminar"
       divFav.appendChild(delFav)
+      delFav.onclick = () => favouriteDogsDelete(element.id);
     });
       
 
@@ -106,10 +103,32 @@ async function favouriteDogsSave(id){
     error.classList.remove('error');
     error.classList.add('success');
     error.innerHTML = `succes: ${res.status}`;
+    console.log("guardado")
   }
   console.log(data)
   console.log(res.status)
 }
+
+async function favouriteDogsDelete(id){
+  const res = await fetch(URL_FAVOURITE_DELETE(id),{
+    method: 'DELETE',
+  });
+  const data = await res.json();
+
+  if(res.status !== 200){
+    error.classList.remove('success');
+    error.classList.add('error');
+    error.innerHTML = `Error ${res.status} : ${data}`;
+    return;
+  }else{
+    error.classList.remove('hidden');
+    error.classList.remove('error');
+    error.classList.add('success');
+    error.innerHTML = `succes: ${res.status}`;
+    console.log("Eliminado");
+  }
+}
+
 
 button_next.addEventListener('click', () => {
   for(let i = 0; i <= datas.length + 1;  i++){
