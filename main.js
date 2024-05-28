@@ -46,11 +46,11 @@ async function favouriteDogs(){
     const data2 = await res2.json();
     if(res2.status !== 200) throw new Error(`${res2.status}: ${res2.statusText}`);
     console.log('Favourite:',data2);
-
+    
     data2.forEach(element => {
       favoritos.push(element);
     });
-
+    
     favoritos.forEach(element => {
       const art = document.createElement('article');
       favorito.appendChild(art);
@@ -68,7 +68,6 @@ async function favouriteDogs(){
       divFav.appendChild(delFav)
       delFav.onclick = () => favouriteDogsDelete(element.id);
     });
-      
 
   }catch(error){
     error2.classList.remove('hidden')
@@ -126,6 +125,7 @@ async function favouriteDogsDelete(id){
     error.classList.add('success');
     error.innerHTML = `succes: ${res.status}`;
     console.log("Eliminado");
+    location.reload();
   }
 }
 
